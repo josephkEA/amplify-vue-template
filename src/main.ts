@@ -1,4 +1,6 @@
 import "./assets/main.css";
+import "@aws-amplify/ui-vue/styles.css";
+import "./assets/amplify-ui.css";
 import { createApp } from "vue";
 import App from "./App.vue";
 import { Amplify } from "aws-amplify";

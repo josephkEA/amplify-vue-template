@@ -5,6 +5,93 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+    <style>
+      /* Critical Amplify UI fixes - loaded early to ensure proper styling */
+      amplify-authenticator {
+        --amplify-colors-font-primary: rgb(31, 41, 55) !important;
+        --amplify-colors-background-primary: white !important;
+        --amplify-colors-border-primary: rgb(209, 213, 219) !important;
+        --amplify-colors-brand-primary-80: rgb(59, 130, 246) !important;
+        --amplify-colors-brand-primary-90: rgb(37, 99, 235) !important;
+        --amplify-fonts-default: 'Inter', system-ui, sans-serif !important;
+      }
+      
+      /* Fix black buttons */
+      amplify-authenticator button[type="submit"],
+      amplify-authenticator .amplify-button--primary {
+        background-color: rgb(59, 130, 246) !important;
+        border-color: rgb(59, 130, 246) !important;
+        color: white !important;
+        border-radius: 0.5rem !important;
+        font-weight: 600 !important;
+        padding: 0.75rem 1rem !important;
+        width: 100% !important;
+      }
+      
+      amplify-authenticator button[type="submit"]:hover,
+      amplify-authenticator .amplify-button--primary:hover {
+        background-color: rgb(37, 99, 235) !important;
+        border-color: rgb(37, 99, 235) !important;
+      }
+      
+      /* Fix password visibility button - black box issue */
+      amplify-authenticator .amplify-field__show-password,
+      amplify-authenticator button[data-amplify-fieldshow-password],
+      amplify-authenticator [data-amplify-field-show-password] {
+        background: transparent !important;
+        border: none !important;
+        color: rgb(107, 114, 128) !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 0.5rem !important;
+        font-size: 1rem !important;
+        position: absolute !important;
+        right: 0.75rem !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+      }
+      
+      amplify-authenticator .amplify-field__show-password:hover,
+      amplify-authenticator button[data-amplify-fieldshow-password]:hover,
+      amplify-authenticator [data-amplify-field-show-password]:hover {
+        color: rgb(59, 130, 246) !important;
+        background-color: rgba(59, 130, 246, 0.1) !important;
+      }
+      
+      /* Input styling */
+      amplify-authenticator input[type="text"],
+      amplify-authenticator input[type="email"],
+      amplify-authenticator input[type="password"],
+      amplify-authenticator input[type="tel"],
+      amplify-authenticator .amplify-input {
+        border: 1px solid rgb(209, 213, 219) !important;
+        border-radius: 0.5rem !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        background-color: white !important;
+      }
+      
+      amplify-authenticator input:focus {
+        border-color: rgb(59, 130, 246) !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        outline: none !important;
+      }
+      
+      /* Form container */
+      amplify-authenticator .amplify-authenticator {
+        background: white !important;
+        border-radius: 1rem !important;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+      }
+      
+      amplify-authenticator .amplify-tabs {
+        background: white !important;
+        padding: 2rem !important;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
