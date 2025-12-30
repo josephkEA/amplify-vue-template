@@ -1,0 +1,201 @@
+/* Ultra-specific Amplify UI styling with maximum specificity */
+
+/* Global CSS custom properties that Amplify UI will inherit */
+:root {
+  --amplify-colors-font-primary: rgb(31, 41, 55);
+  --amplify-colors-background-primary: white;
+  --amplify-colors-border-primary: rgb(209, 213, 219);
+  --amplify-colors-brand-primary-80: rgb(59, 130, 246);
+  --amplify-colors-brand-primary-90: rgb(37, 99, 235);
+  --amplify-colors-brand-primary-100: rgb(29, 78, 216);
+  --amplify-fonts-default: 'Inter', system-ui, sans-serif;
+}
+
+/* Target all possible button selectors with maximum specificity */
+amplify-authenticator amplify-authenticator button[type="submit"],
+amplify-authenticator amplify-authenticator .amplify-button--primary,
+amplify-authenticator button[type="submit"],
+amplify-authenticator .amplify-button--primary,
+amplify-authenticator button.amplify-button--primary,
+amplify-authenticator button[data-amplify-button-primary],
+amplify-authenticator [data-amplify-button="primary"] {
+  background-color: rgb(59, 130, 246) !important;
+  background: rgb(59, 130, 246) !important;
+  border-color: rgb(59, 130, 246) !important;
+  border: 1px solid rgb(59, 130, 246) !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1rem !important;
+  width: 100% !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+amplify-authenticator amplify-authenticator button[type="submit"]:hover,
+amplify-authenticator amplify-authenticator .amplify-button--primary:hover,
+amplify-authenticator button[type="submit"]:hover,
+amplify-authenticator .amplify-button--primary:hover,
+amplify-authenticator button.amplify-button--primary:hover,
+amplify-authenticator button[data-amplify-button-primary]:hover,
+amplify-authenticator [data-amplify-button="primary"]:hover {
+  background-color: rgb(37, 99, 235) !important;
+  background: rgb(37, 99, 235) !important;
+  border-color: rgb(37, 99, 235) !important;
+  border: 1px solid rgb(37, 99, 235) !important;
+}
+
+/* Target password visibility button with all possible selectors */
+amplify-authenticator .amplify-field__show-password,
+amplify-authenticator button[data-amplify-fieldshow-password],
+amplify-authenticator [data-amplify-field-show-password],
+amplify-authenticator button[aria-label*="password"],
+amplify-authenticator button[title*="password"],
+amplify-authenticator .amplify-field--password button,
+amplify-authenticator .amplify-password-field button {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  color: rgb(107, 114, 128) !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+  position: absolute !important;
+  right: 0.75rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+}
+
+amplify-authenticator .amplify-field__show-password:hover,
+amplify-authenticator button[data-amplify-fieldshow-password]:hover,
+amplify-authenticator [data-amplify-field-show-password]:hover,
+amplify-authenticator button[aria-label*="password"]:hover,
+amplify-authenticator button[title*="password"]:hover,
+amplify-authenticator .amplify-field--password button:hover,
+amplify-authenticator .amplify-password-field button:hover {
+  color: rgb(59, 130, 246) !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Input field styling */
+amplify-authenticator input[type="text"],
+amplify-authenticator input[type="email"],
+amplify-authenticator input[type="password"],
+amplify-authenticator input[type="tel"],
+amplify-authenticator .amplify-input,
+amplify-authenticator input.amplify-input {
+  border: 1px solid rgb(209, 213, 219) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  background-color: white !important;
+  background: white !important;
+  color: rgb(31, 41, 55) !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+amplify-authenticator input[type="text"]:focus,
+amplify-authenticator input[type="email"]:focus,
+amplify-authenticator input[type="password"]:focus,
+amplify-authenticator input[type="tel"]:focus,
+amplify-authenticator .amplify-input:focus,
+amplify-authenticator input.amplify-input:focus {
+  border-color: rgb(59, 130, 246) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  outline: none !important;
+}
+
+/* Password field container */
+amplify-authenticator .amplify-field--password,
+amplify-authenticator .amplify-password-field {
+  position: relative !important;
+}
+
+amplify-authenticator .amplify-field--password input,
+amplify-authenticator .amplify-password-field input {
+  padding-right: 3rem !important;
+}
+
+/* Form container styling */
+amplify-authenticator .amplify-authenticator,
+amplify-authenticator amplify-authenticator {
+  background: white !important;
+  background-color: white !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+  border: 1px solid rgb(229, 231, 235) !important;
+}
+
+amplify-authenticator .amplify-tabs {
+  background: white !important;
+  background-color: white !important;
+  padding: 2rem !important;
+  border-radius: 1rem !important;
+}
+
+/* Headings */
+amplify-authenticator .amplify-heading,
+amplify-authenticator h1,
+amplify-authenticator h2 {
+  color: rgb(31, 41, 55) !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+}
+
+/* Labels */
+amplify-authenticator .amplify-label,
+amplify-authenticator label {
+  color: rgb(55, 65, 81) !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+/* Error messages */
+amplify-authenticator .amplify-alert--error {
+  background-color: rgb(254, 242, 242) !important;
+  border: 1px solid rgb(252, 165, 165) !important;
+  color: rgb(185, 28, 28) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Link buttons */
+amplify-authenticator .amplify-button--link,
+amplify-authenticator a {
+  color: rgb(59, 130, 246) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+amplify-authenticator .amplify-button--link:hover,
+amplify-authenticator a:hover {
+  color: rgb(37, 99, 235) !important;
+  text-decoration: underline !important;
+}
+
+/* Form fields spacing */
+amplify-authenticator .amplify-field {
+  margin-bottom: 1rem !important;
+}
+
+/* Override any dark/black backgrounds */
+amplify-authenticator * {
+  background-color: inherit !important;
+}
+
+amplify-authenticator button:not([type="submit"]):not(.amplify-button--primary) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
